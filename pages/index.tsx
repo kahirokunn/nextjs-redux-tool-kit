@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import { PokemonPageLink } from "./pokemon";
 
 const Home: NextPage = () => {
   return (
@@ -19,12 +20,12 @@ const Home: NextPage = () => {
         <p className={styles.description}>Some examples</p>
 
         <div className={styles.grid}>
-          <Link href="/pokemon">
-            <a className={styles.card}>
-              <h2>Pokemon &rarr;</h2>
-              <p>The implementation of the Redux official tutorial</p>
-            </a>
-          </Link>
+          <PokemonPageLink aProps={{
+            className: styles.card
+          }}>
+            <h2>Pokemon &rarr;</h2>
+            <p>The implementation of the Redux official tutorial</p>
+          </PokemonPageLink>
 
           <Link href="/pet">
             <a className={styles.card}>
